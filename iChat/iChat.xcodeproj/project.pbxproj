@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		D3475E2120D80B8900F8800A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E2020D80B8900F8800A /* AppDelegate.swift */; };
-		D3475E2320D80B8900F8800A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E2220D80B8900F8800A /* ViewController.swift */; };
 		D3475E2620D80B8900F8800A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3475E2420D80B8900F8800A /* Main.storyboard */; };
 		D3475E2820D80B8900F8800A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3475E2720D80B8900F8800A /* Assets.xcassets */; };
 		D3475E2B20D80B8900F8800A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3475E2920D80B8900F8800A /* LaunchScreen.storyboard */; };
+		D3475E3320D80E3600F8800A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E3220D80E3600F8800A /* WelcomeViewController.swift */; };
+		D3475E3520D81C3F00F8800A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3475E3420D81C3F00F8800A /* GoogleService-Info.plist */; };
+		D3475E3720D81D6B00F8800A /* FUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E3620D81D6B00F8800A /* FUser.swift */; };
+		D3475E3920D81DE200F8800A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E3820D81DE200F8800A /* Constants.swift */; };
+		D3475E3B20D8206200F8800A /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E3A20D8206200F8800A /* FCollectionReference.swift */; };
+		D3475E3D20D820F900F8800A /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E3C20D820F900F8800A /* HelperFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D3475E1D20D80B8900F8800A /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3475E2020D80B8900F8800A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D3475E2220D80B8900F8800A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D3475E2520D80B8900F8800A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3475E2720D80B8900F8800A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3475E2A20D80B8900F8800A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3475E2C20D80B8900F8800A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3475E3220D80E3600F8800A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		D3475E3420D81C3F00F8800A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D3475E3620D81D6B00F8800A /* FUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUser.swift; sourceTree = "<group>"; };
+		D3475E3820D81DE200F8800A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D3475E3A20D8206200F8800A /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
+		D3475E3C20D820F900F8800A /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +65,26 @@
 			isa = PBXGroup;
 			children = (
 				D3475E2020D80B8900F8800A /* AppDelegate.swift */,
-				D3475E2220D80B8900F8800A /* ViewController.swift */,
+				D3475E3E20D8219500F8800A /* Extension */,
+				D3475E3220D80E3600F8800A /* WelcomeViewController.swift */,
 				D3475E2420D80B8900F8800A /* Main.storyboard */,
 				D3475E2720D80B8900F8800A /* Assets.xcassets */,
 				D3475E2920D80B8900F8800A /* LaunchScreen.storyboard */,
 				D3475E2C20D80B8900F8800A /* Info.plist */,
+				D3475E3420D81C3F00F8800A /* GoogleService-Info.plist */,
 			);
 			path = iChat;
+			sourceTree = "<group>";
+		};
+		D3475E3E20D8219500F8800A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D3475E3820D81DE200F8800A /* Constants.swift */,
+				D3475E3A20D8206200F8800A /* FCollectionReference.swift */,
+				D3475E3C20D820F900F8800A /* HelperFunctions.swift */,
+				D3475E3620D81D6B00F8800A /* FUser.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3475E2B20D80B8900F8800A /* LaunchScreen.storyboard in Resources */,
+				D3475E3520D81C3F00F8800A /* GoogleService-Info.plist in Resources */,
 				D3475E2820D80B8900F8800A /* Assets.xcassets in Resources */,
 				D3475E2620D80B8900F8800A /* Main.storyboard in Resources */,
 			);
@@ -135,8 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3475E2320D80B8900F8800A /* ViewController.swift in Sources */,
+				D3475E3720D81D6B00F8800A /* FUser.swift in Sources */,
 				D3475E2120D80B8900F8800A /* AppDelegate.swift in Sources */,
+				D3475E3B20D8206200F8800A /* FCollectionReference.swift in Sources */,
+				D3475E3320D80E3600F8800A /* WelcomeViewController.swift in Sources */,
+				D3475E3920D81DE200F8800A /* Constants.swift in Sources */,
+				D3475E3D20D820F900F8800A /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
