@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class WelcomeViewController: UIViewController {
 
@@ -24,9 +25,29 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: Any) {
         self.dissmissKeyboard()
+        if self.emailTextField.text != "" && self.passwordTextField.text != ""{
+            self.loginUser()
+        } else {
+            ProgressHUD.showError("Email and Password is missing!")
+        }
+
     }
+    
     @IBAction func registerButtonPress(_ sender: Any) {
         self.dissmissKeyboard()
+        
+        if self.emailTextField.text != "" && self.passwordTextField.text != "" && self.repeatPasswordTextField.text != ""{
+            
+            if self.passwordTextField.text == self.repeatPasswordTextField.text{
+                self.registerUser()
+            }else{
+                ProgressHUD.showError("Password dont match!")
+            }
+            
+            
+        } else {
+            ProgressHUD.showError("All fields are required!")
+        }
     }
     
     @IBAction func backgroundTap(_ sender: Any) {
@@ -45,4 +66,30 @@ class WelcomeViewController: UIViewController {
         self.repeatPasswordTextField.text = ""
     }
     
+    func loginUser(){
+        ProgressHUD.show("Login...")
+        FUser.loginUserWith(email: self.emailTextField.text!,
+                            password: self.passwordTextField.text!) { (error) in
+                                if(error) != nil{
+                                    ProgressHUD.showError(error!.localizedDescription)
+                                    return
+                                }
+                                self.goToApp()
+        }
+    }
+    
+    //MARK: GoToApp
+    
+    func goToApp(){
+        ProgressHUD.dismiss()
+        self.cleanTextFields()
+        dissmissKeyboard()
+        
+        print("show the app")
+        //present app here
+    }
+    
+    func registerUser(){
+        print("register")
+    }
 }

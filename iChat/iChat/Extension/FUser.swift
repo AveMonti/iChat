@@ -191,7 +191,7 @@ class FUser {
                 return
                 
             } else {
-                
+                 
                 //get user from firebase and save locally
                 fetchCurrentUserFromFirestore(userId: firUser!.user.uid)
                 completion(error)
