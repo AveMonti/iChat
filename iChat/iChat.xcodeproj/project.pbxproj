@@ -17,6 +17,7 @@
 		D3475E3920D81DE200F8800A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E3820D81DE200F8800A /* Constants.swift */; };
 		D3475E3B20D8206200F8800A /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E3A20D8206200F8800A /* FCollectionReference.swift */; };
 		D3475E3D20D820F900F8800A /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E3C20D820F900F8800A /* HelperFunctions.swift */; };
+		D3475E4020D9A7F200F8800A /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E3F20D9A7F200F8800A /* FinishRegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D3475E3820D81DE200F8800A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D3475E3A20D8206200F8800A /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		D3475E3C20D820F900F8800A /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		D3475E3F20D9A7F200F8800A /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,7 @@
 			children = (
 				D3475E2020D80B8900F8800A /* AppDelegate.swift */,
 				D3475E3E20D8219500F8800A /* Extension */,
-				D3475E3220D80E3600F8800A /* WelcomeViewController.swift */,
+				D3475E4120D9A80D00F8800A /* Vc */,
 				D3475E2420D80B8900F8800A /* Main.storyboard */,
 				D3475E2720D80B8900F8800A /* Assets.xcassets */,
 				D3475E2920D80B8900F8800A /* LaunchScreen.storyboard */,
@@ -85,6 +87,15 @@
 				D3475E3620D81D6B00F8800A /* FUser.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		D3475E4120D9A80D00F8800A /* Vc */ = {
+			isa = PBXGroup;
+			children = (
+				D3475E3220D80E3600F8800A /* WelcomeViewController.swift */,
+				D3475E3F20D9A7F200F8800A /* FinishRegistrationViewController.swift */,
+			);
+			path = Vc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 				D3475E3B20D8206200F8800A /* FCollectionReference.swift in Sources */,
 				D3475E3320D80E3600F8800A /* WelcomeViewController.swift in Sources */,
 				D3475E3920D81DE200F8800A /* Constants.swift in Sources */,
+				D3475E4020D9A7F200F8800A /* FinishRegistrationViewController.swift in Sources */,
 				D3475E3D20D820F900F8800A /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

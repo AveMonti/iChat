@@ -19,6 +19,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
     
     //MARK: IBActions
@@ -83,13 +84,24 @@ class WelcomeViewController: UIViewController {
     func goToApp(){
         ProgressHUD.dismiss()
         self.cleanTextFields()
-        dissmissKeyboard()
+        self.dissmissKeyboard()
         
         print("show the app")
         //present app here
     }
     
     func registerUser(){
-        print("register")
+        performSegue(withIdentifier: "welecomeToFinishRegistration", sender: self)
+        self.cleanTextFields()
+        self.dissmissKeyboard()
+    }
+    
+    //MARK: Navigatiom
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "welecomeToFinishRegistration"{
+            let vc = segue.destination as! FinishRegistrationViewController
+            vc.email = emailTextField.text!
+            vc.password = passwordTextField.text!
+        }
     }
 }
