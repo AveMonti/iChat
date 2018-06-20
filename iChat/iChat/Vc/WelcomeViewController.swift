@@ -75,6 +75,7 @@ class WelcomeViewController: UIViewController {
                                     ProgressHUD.showError(error!.localizedDescription)
                                     return
                                 }
+                                ProgressHUD.dismiss()
                                 self.goToApp()
         }
     }
@@ -86,8 +87,9 @@ class WelcomeViewController: UIViewController {
         self.cleanTextFields()
         self.dissmissKeyboard()
         
-        print("show the app")
-        //present app here
+        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "myApplication") as! UITabBarController
+        
+        self.present(mainView, animated: true, completion: nil)
     }
     
     func registerUser(){

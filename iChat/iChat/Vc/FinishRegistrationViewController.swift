@@ -71,12 +71,46 @@ class FinishRegistrationViewController: UIViewController {
         
         if(self.avatarImage == nil){
             imageFromInitials(firstName: self.nameTextField.text!, lastName: self.surnameTextField.text!) { (avatarInitials) in
-                let avatarIMG = avatarInitials
+                let avatarIMG = UIImageJPEGRepresentation(avatarInitials, 0.7)
+                let avatar = avatarIMG!.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
                 
+                tempDictionary[kAVATAR] = avatar
+                
+                self.finishRegistration(withValues: tempDictionary)
             }
         }else{
+            let avatarData = UIImageJPEGRepresentation(avatarImage!, 0.7)
+            let avatar = avatarData!.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
             
+            tempDictionary[kAVATAR] = avatar
+            
+            self.finishRegistration(withValues: tempDictionary)
         }
+        
+        
+    }
+    
+    func finishRegistration(withValues:[String: Any]){
+        updateCurrentUserInFirestore(withValues: withValues) { (error) in
+            if error != nil{
+                DispatchQueue.main.async {
+                    ProgressHUD.showError(error?.localizedDescription)
+                    print(error?.localizedDescription)
+                }
+                return
+            }
+            
+            ProgressHUD.dismiss()
+            self.goToApp()
+        }
+    }
+    
+    func goToApp(){
+        self.cleanTextFields()
+        self.dissmissKeyboard()
+        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "myApplication") as! UITabBarController
+        
+        self.present(mainView, animated: true, completion: nil)
     }
     
     func ifNotEmptyTextField() -> Bool{
