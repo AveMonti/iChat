@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D32F792320DEB1DF007E46FD /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F792220DEB1DF007E46FD /* SettingsTableViewController.swift */; };
+		D32F792520E15EB0007E46FD /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F792420E15EB0007E46FD /* UserTableViewCell.swift */; };
+		D32F792820E16609007E46FD /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F792720E16609007E46FD /* UsersTableViewController.swift */; };
 		D3475E2120D80B8900F8800A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E2020D80B8900F8800A /* AppDelegate.swift */; };
 		D3475E2620D80B8900F8800A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3475E2420D80B8900F8800A /* Main.storyboard */; };
 		D3475E2820D80B8900F8800A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3475E2720D80B8900F8800A /* Assets.xcassets */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		D32F792220DEB1DF007E46FD /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		D32F792420E15EB0007E46FD /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		D32F792720E16609007E46FD /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		D3475E1D20D80B8900F8800A /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3475E2020D80B8900F8800A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3475E2520D80B8900F8800A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D32F792620E165D9007E46FD /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				D32F792420E15EB0007E46FD /* UserTableViewCell.swift */,
+				D32F792720E16609007E46FD /* UsersTableViewController.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
 		D3475E1420D80B8900F8800A = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				D3475E2020D80B8900F8800A /* AppDelegate.swift */,
+				D32F792620E165D9007E46FD /* CustomCells */,
 				D3475E3E20D8219500F8800A /* Extension */,
 				D3475E4120D9A80D00F8800A /* Vc */,
 				D3475E2420D80B8900F8800A /* Main.storyboard */,
@@ -174,12 +188,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3475E3720D81D6B00F8800A /* FUser.swift in Sources */,
+				D32F792520E15EB0007E46FD /* UserTableViewCell.swift in Sources */,
 				D3475E2120D80B8900F8800A /* AppDelegate.swift in Sources */,
 				D3475E3B20D8206200F8800A /* FCollectionReference.swift in Sources */,
 				D3475E3320D80E3600F8800A /* WelcomeViewController.swift in Sources */,
 				D32F792320DEB1DF007E46FD /* SettingsTableViewController.swift in Sources */,
 				D3475E3920D81DE200F8800A /* Constants.swift in Sources */,
 				D3475E4020D9A7F200F8800A /* FinishRegistrationViewController.swift in Sources */,
+				D32F792820E16609007E46FD /* UsersTableViewController.swift in Sources */,
 				D3475E3D20D820F900F8800A /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

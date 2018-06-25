@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -276,6 +277,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGd-Pv-SBQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2676" y="-198.35082458770617"/>
+        </scene>
+        <!--Users Table View Controller-->
+        <scene sceneID="pGr-86-RIh">
+            <objects>
+                <tableViewController id="UhY-Gh-Skp" customClass="UsersTableViewController" customModule="iChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tqg-25-vR9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="hf3-Th-s6J">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kgN-7P-IkJ">
+                                    <rect key="frame" x="8" y="8" width="359" height="29"/>
+                                    <segments>
+                                        <segment title="My city"/>
+                                        <segment title="My Country"/>
+                                        <segment title="All"/>
+                                    </segments>
+                                </segmentedControl>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="kgN-7P-IkJ" firstAttribute="leading" secondItem="hf3-Th-s6J" secondAttribute="leading" constant="8" id="NXW-Mp-J1Z"/>
+                                <constraint firstAttribute="trailing" secondItem="kgN-7P-IkJ" secondAttribute="trailing" constant="8" id="ZST-Dt-Mpi"/>
+                                <constraint firstItem="kgN-7P-IkJ" firstAttribute="centerX" secondItem="hf3-Th-s6J" secondAttribute="centerX" id="qmM-Yq-bIr"/>
+                                <constraint firstItem="kgN-7P-IkJ" firstAttribute="centerY" secondItem="hf3-Th-s6J" secondAttribute="centerY" id="voJ-MD-Afa"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="NH9-SI-zjh" customClass="UserTableViewCell" customModule="iChat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NH9-SI-zjh" id="pqg-cC-R03">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can find here full name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrU-Qj-deJ">
+                                            <rect key="frame" x="76" y="29" width="291" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="ALC-ll-Bp4">
+                                            <rect key="frame" x="8" y="9" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="1QC-bD-s3I"/>
+                                                <constraint firstAttribute="height" constant="60" id="XEn-MQ-OGc"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ALC-ll-Bp4" firstAttribute="centerY" secondItem="pqg-cC-R03" secondAttribute="centerY" id="1sp-qN-k4J"/>
+                                        <constraint firstItem="ALC-ll-Bp4" firstAttribute="leading" secondItem="pqg-cC-R03" secondAttribute="leading" constant="8" id="2Hz-3N-FC4"/>
+                                        <constraint firstItem="QrU-Qj-deJ" firstAttribute="trailing" secondItem="pqg-cC-R03" secondAttribute="trailingMargin" constant="8" id="2sB-tn-nwQ"/>
+                                        <constraint firstItem="QrU-Qj-deJ" firstAttribute="centerY" secondItem="pqg-cC-R03" secondAttribute="centerY" id="8Hq-uC-DxH"/>
+                                        <constraint firstItem="QrU-Qj-deJ" firstAttribute="leading" secondItem="ALC-ll-Bp4" secondAttribute="trailing" constant="8" id="lum-PD-deT"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="avatarImageView" destination="ALC-ll-Bp4" id="kUm-bd-jh2"/>
+                                    <outlet property="fullNameLabel" destination="QrU-Qj-deJ" id="0Fk-TU-DPo"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UhY-Gh-Skp" id="Oa4-cJ-DNl"/>
+                            <outlet property="delegate" destination="UhY-Gh-Skp" id="VUz-Ew-oN1"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="filterSegmentedControll" destination="kgN-7P-IkJ" id="2Pc-fC-yhY"/>
+                        <outlet property="headerView" destination="hf3-Th-s6J" id="3Sn-zX-vPR"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A7n-iw-leB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4570.3999999999996" y="-220.83958020989508"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nDu-gb-uQs">
