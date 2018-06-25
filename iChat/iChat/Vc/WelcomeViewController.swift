@@ -87,6 +87,7 @@ class WelcomeViewController: UIViewController {
         self.cleanTextFields()
         self.dissmissKeyboard()
         
+        
         let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "myApplication") as! UITabBarController
         
         self.present(mainView, animated: true, completion: nil)

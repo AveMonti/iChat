@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D32F792320DEB1DF007E46FD /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F792220DEB1DF007E46FD /* SettingsTableViewController.swift */; };
 		D3475E2120D80B8900F8800A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E2020D80B8900F8800A /* AppDelegate.swift */; };
 		D3475E2620D80B8900F8800A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3475E2420D80B8900F8800A /* Main.storyboard */; };
 		D3475E2820D80B8900F8800A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3475E2720D80B8900F8800A /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D32F792220DEB1DF007E46FD /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		D3475E1D20D80B8900F8800A /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3475E2020D80B8900F8800A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3475E2520D80B8900F8800A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				D3475E3220D80E3600F8800A /* WelcomeViewController.swift */,
 				D3475E3F20D9A7F200F8800A /* FinishRegistrationViewController.swift */,
+				D32F792220DEB1DF007E46FD /* SettingsTableViewController.swift */,
 			);
 			path = Vc;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				D3475E2120D80B8900F8800A /* AppDelegate.swift in Sources */,
 				D3475E3B20D8206200F8800A /* FCollectionReference.swift in Sources */,
 				D3475E3320D80E3600F8800A /* WelcomeViewController.swift in Sources */,
+				D32F792320DEB1DF007E46FD /* SettingsTableViewController.swift in Sources */,
 				D3475E3920D81DE200F8800A /* Constants.swift in Sources */,
 				D3475E4020D9A7F200F8800A /* FinishRegistrationViewController.swift in Sources */,
 				D3475E3D20D820F900F8800A /* HelperFunctions.swift in Sources */,
