@@ -12,10 +12,6 @@ import ProgressHUD
 
 class UsersTableViewController: UITableViewController, UISearchResultsUpdating {
     
-    func updateSearchResults(for searchController: UISearchController) {
-        <#code#>
-    }
-    
 
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var filterSegmentedControll: UISegmentedControl!
@@ -48,6 +44,20 @@ class UsersTableViewController: UITableViewController, UISearchResultsUpdating {
         // Configure the cell...
 
         return cell
+    }
+    
+    // MARK: - Search controller functions
+    
+    func filterContentForSearchText(searchText: String, scope: String = "All"){
+        
+        self.fillterdUsers = allUsers.filter({ (user) -> Bool in
+            return user.firstname.lowercased().contains(searchText.lowercased())
+        })
+        tableView.reloadData()
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        self.filterContentForSearchText(searchText: self.searchController.searchBar.text!)
     }
 
 }
