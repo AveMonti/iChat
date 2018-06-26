@@ -11,6 +11,7 @@
 		D32F792520E15EB0007E46FD /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F792420E15EB0007E46FD /* UserTableViewCell.swift */; };
 		D32F792820E16609007E46FD /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F792720E16609007E46FD /* UsersTableViewController.swift */; };
 		D32F792A20E17649007E46FD /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F792920E17649007E46FD /* ChatsViewController.swift */; };
+		D32F792C20E2E438007E46FD /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F792B20E2E438007E46FD /* ProfileTableViewController.swift */; };
 		D3475E2120D80B8900F8800A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E2020D80B8900F8800A /* AppDelegate.swift */; };
 		D3475E2620D80B8900F8800A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3475E2420D80B8900F8800A /* Main.storyboard */; };
 		D3475E2820D80B8900F8800A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3475E2720D80B8900F8800A /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		D32F792420E15EB0007E46FD /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		D32F792720E16609007E46FD /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		D32F792920E17649007E46FD /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
+		D32F792B20E2E438007E46FD /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		D3475E1D20D80B8900F8800A /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3475E2020D80B8900F8800A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3475E2520D80B8900F8800A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				D32F792420E15EB0007E46FD /* UserTableViewCell.swift */,
 				D32F792720E16609007E46FD /* UsersTableViewController.swift */,
 				D32F792920E17649007E46FD /* ChatsViewController.swift */,
+				D32F792B20E2E438007E46FD /* ProfileTableViewController.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				D3475E3B20D8206200F8800A /* FCollectionReference.swift in Sources */,
 				D3475E3320D80E3600F8800A /* WelcomeViewController.swift in Sources */,
 				D32F792320DEB1DF007E46FD /* SettingsTableViewController.swift in Sources */,
+				D32F792C20E2E438007E46FD /* ProfileTableViewController.swift in Sources */,
 				D3475E3920D81DE200F8800A /* Constants.swift in Sources */,
 				D3475E4020D9A7F200F8800A /* FinishRegistrationViewController.swift in Sources */,
 				D32F792A20E17649007E46FD /* ChatsViewController.swift in Sources */,

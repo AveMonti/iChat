@@ -8,8 +8,15 @@
 
 import UIKit
 
+
+protocol UserTableViewCellDelegate {
+    func didTapAvatarImage(indexPath: IndexPath)
+}
+
 class UserTableViewCell: UITableViewCell {
 
+    var delegate: UserTableViewCellDelegate?
+    
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
     var indexPath: IndexPath!
@@ -41,7 +48,7 @@ class UserTableViewCell: UITableViewCell {
     }
     
     @objc func avatarTap(){
-        print("Avatar tap ap \(self.indexPath)")
+        self.delegate!.didTapAvatarImage(indexPath: self.indexPath)
     }
     
 }
