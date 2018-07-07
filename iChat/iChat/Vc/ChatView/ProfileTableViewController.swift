@@ -37,7 +37,20 @@ class ProfileTableViewController: UITableViewController {
     }
     
     @IBAction func blockUserButtonPressed(_ sender: Any) {
+        var currentBlockedIds = FUser.currentUser()!.blockedUsers
         
+        if currentBlockedIds.contains(user!.objectId){
+            currentBlockedIds.remove(at: currentBlockedIds.index(of: user!.objectId)!)
+        }else{
+            currentBlockedIds.append(user!.objectId)
+        }
+        updateCurrentUserInFirestore(withValues: [kBLOCKEDUSERID: currentBlockedIds]) { (error) in
+            if error != nil{
+                print("error \(error!.localizedDescription)")
+                return
+            }
+            self.updateBlockStatus()
+        }
     }
     
     //MARK: helper methods
@@ -59,7 +72,21 @@ class ProfileTableViewController: UITableViewController {
     }
 
     func updateBlockStatus(){
+        if user!.objectId != FUser.currentId(){
+            self.blockUserOutlet.isHidden = false
+            self.messageButtonOutlet.isHidden = false
+            callButtonOutlet.isHidden = false
+        }else{
+            self.blockUserOutlet.isHidden = true
+            self.messageButtonOutlet.isHidden = true
+            callButtonOutlet.isHidden = true
+        }
         
+        if FUser.currentUser()!.blockedUsers.contains(self.user!.objectId){
+            self.blockUserOutlet.setTitle("Unblock User", for: .normal)
+        }else{
+            self.blockUserOutlet.setTitle("Block User", for: .normal)
+        }
     }
     
     // MARK: - Table view data source

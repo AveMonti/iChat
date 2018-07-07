@@ -23,6 +23,8 @@
 		D3475E3B20D8206200F8800A /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E3A20D8206200F8800A /* FCollectionReference.swift */; };
 		D3475E3D20D820F900F8800A /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E3C20D820F900F8800A /* HelperFunctions.swift */; };
 		D3475E4020D9A7F200F8800A /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3475E3F20D9A7F200F8800A /* FinishRegistrationViewController.swift */; };
+		D34CCD3720E3F4F300FF9B32 /* Recent.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34CCD3620E3F4F300FF9B32 /* Recent.swift */; };
+		D3E4D3F120EFE73E008D9C9F /* RecentChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E4D3F020EFE73E008D9C9F /* RecentChatsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		D3475E3A20D8206200F8800A /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		D3475E3C20D820F900F8800A /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		D3475E3F20D9A7F200F8800A /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
+		D34CCD3620E3F4F300FF9B32 /* Recent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recent.swift; sourceTree = "<group>"; };
+		D3E4D3F020EFE73E008D9C9F /* RecentChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,11 +65,18 @@
 			isa = PBXGroup;
 			children = (
 				D32F792420E15EB0007E46FD /* UserTableViewCell.swift */,
-				D32F792720E16609007E46FD /* UsersTableViewController.swift */,
-				D32F792920E17649007E46FD /* ChatsViewController.swift */,
-				D32F792B20E2E438007E46FD /* ProfileTableViewController.swift */,
+				D3E4D3F020EFE73E008D9C9F /* RecentChatsTableViewCell.swift */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		D341D85F20E3F1CE00D88D19 /* WelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				D3475E3220D80E3600F8800A /* WelcomeViewController.swift */,
+				D3475E3F20D9A7F200F8800A /* FinishRegistrationViewController.swift */,
+			);
+			path = WelcomeView;
 			sourceTree = "<group>";
 		};
 		D3475E1420D80B8900F8800A = {
@@ -88,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				D3475E2020D80B8900F8800A /* AppDelegate.swift */,
-				D32F792620E165D9007E46FD /* CustomCells */,
 				D3475E3E20D8219500F8800A /* Extension */,
 				D3475E4120D9A80D00F8800A /* Vc */,
 				D3475E2420D80B8900F8800A /* Main.storyboard */,
@@ -107,6 +117,7 @@
 				D3475E3A20D8206200F8800A /* FCollectionReference.swift */,
 				D3475E3C20D820F900F8800A /* HelperFunctions.swift */,
 				D3475E3620D81D6B00F8800A /* FUser.swift */,
+				D34CCD3620E3F4F300FF9B32 /* Recent.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -114,11 +125,30 @@
 		D3475E4120D9A80D00F8800A /* Vc */ = {
 			isa = PBXGroup;
 			children = (
-				D3475E3220D80E3600F8800A /* WelcomeViewController.swift */,
-				D3475E3F20D9A7F200F8800A /* FinishRegistrationViewController.swift */,
-				D32F792220DEB1DF007E46FD /* SettingsTableViewController.swift */,
+				D32F792620E165D9007E46FD /* CustomCells */,
+				D34CCD3520E3F36200FF9B32 /* ChatView */,
+				D34CCD3420E3F33700FF9B32 /* SettingsView */,
+				D341D85F20E3F1CE00D88D19 /* WelcomeView */,
 			);
 			path = Vc;
+			sourceTree = "<group>";
+		};
+		D34CCD3420E3F33700FF9B32 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				D32F792220DEB1DF007E46FD /* SettingsTableViewController.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		D34CCD3520E3F36200FF9B32 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				D32F792720E16609007E46FD /* UsersTableViewController.swift */,
+				D32F792920E17649007E46FD /* ChatsViewController.swift */,
+				D32F792B20E2E438007E46FD /* ProfileTableViewController.swift */,
+			);
+			path = ChatView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +223,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E4D3F120EFE73E008D9C9F /* RecentChatsTableViewCell.swift in Sources */,
 				D3475E3720D81D6B00F8800A /* FUser.swift in Sources */,
+				D34CCD3720E3F4F300FF9B32 /* Recent.swift in Sources */,
 				D32F792520E15EB0007E46FD /* UserTableViewCell.swift in Sources */,
 				D3475E2120D80B8900F8800A /* AppDelegate.swift in Sources */,
 				D3475E3B20D8206200F8800A /* FCollectionReference.swift in Sources */,
